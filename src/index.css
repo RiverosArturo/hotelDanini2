@@ -1,0 +1,10 @@
+html, body {
+    background-color: #fff;
+}
+
+.navbar {
+    --bs-navbar-padding-y: 0rem;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #efb810 !important;
+} 

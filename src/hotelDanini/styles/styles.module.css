@@ -1,0 +1,170 @@
+.navbarC {
+    /* background-color: #0e331f; */
+    background-color: #003629;
+}
+
+.tabla th{
+    font-family: "BebasNue";
+    font-style: normal;
+    font-size: 22px;
+    text-align: center;
+    text-transform: none;
+    font-weight: 10;
+    padding-top: 0px;
+    color: rgb(99, 99, 99);
+    padding-right: 15px;
+}
+
+.tabla h1 {
+    margin-bottom: 12px;
+    font-family: "BebasNue";
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 10;
+    border-bottom: 2px solid rgb(0, 106, 81,0.8);
+    color: #006a51;
+}
+
+.menu a{
+    font-family: "BebasNue";
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    transition: all 300ms;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: #006a51;
+    color: white;
+}
+.footer {
+    font-family: "BebasNeu", "TrebuchetMS";
+}
+
+.footer h3 {
+    display: block;
+    background: #ffffff; 
+    height: 50px;
+    letter-spacing: 2px; 
+    text-align: center;
+    font-family: "BebasNeue", sans-serif; 
+    font-size: 24px; 
+    line-height: 50px; 
+    color: black; 
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+.footer a:hover {
+    color: #efb810;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 100%;
+    font-family: "BebasNue";
+    font-style: italic;
+    font-size: 35px;
+    border-bottom: 2px solid rgb(0, 106, 81,0.8);
+    color: rgb(99, 99, 99);
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
+.info2 {
+    display: grid;
+    grid-template-columns: 100%;
+    font-family: "BebasNue";
+    font-style: italic;
+    font-size: 35px;
+    color: rgb(99, 99, 99);
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+
+
+.info h1, .info2 h1{
+    font-family:"BebasNue";
+    font-style: italic;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 10;
+}
+
+.info p, .info2 p{
+    font-family: "BebasNue";
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    text-transform: none;
+    font-weight: 10;
+    padding-top: 50px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////// */
+.hab {
+    font-family: "BebasNue";
+    font-style: italic;
+    font-size: 35px;
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+}
+
+.hab h1 {
+    margin-bottom: 12px;
+    font-family: "BebasNue";
+    font-style: normal;
+    font-size: 28px;
+    text-align: left;
+    font-weight: 10;
+    border-bottom: 2px solid rgb(0, 106, 81,0.8);
+    color: #006a51;
+}
+
+.hab h3 {
+    width: 100%;
+    font-family:"BebasNue";
+    font-style: italic;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 20px;
+    color: rgb(99, 99, 99);
+}
+
+.hab p{
+    font-family: "BebasNue";
+    font-style: normal;
+    font-size: 20px;
+    text-align: justify;
+    text-transform: none;
+    font-weight: 10;
+    padding-top: 0px;
+    color: rgb(99, 99, 99);
+    padding-right: 15px;
+}
+
+.hab a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* Estilos para mostrar o no el navbar */
+.navbar-hide {
+    transform: translateY(-100%);
+    transition: transform 0.9s ease-in-out;
+  }
+
+.navbar-show {
+    transform: translateY(0);
+}
