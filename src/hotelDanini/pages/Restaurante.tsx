@@ -101,8 +101,8 @@ export const Restaurante = () => {
                   }}
                 >
                   <p>
-                    La magnifica experiencia se complementa con un delicioso
-                    menú que le ofrece nuestro restaurante Danini, con una
+                    La magnífica experiencia se complementa con un delicioso
+                    menú que te ofrece nuestro restaurante Danini, con una
                     mezcla de platillos de la región preparadas con ingredientes
                     tradicionales provenientes de la zona, así como las
                     especialidades internacionales que continúan con el

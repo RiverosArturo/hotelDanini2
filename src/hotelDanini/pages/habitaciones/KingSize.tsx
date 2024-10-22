@@ -3,7 +3,7 @@ import { Habitacion, PublicidadSF, Tabla } from "../../components";
 const habitacion = {
   nombre: "King Size",
   informacion:
-    "Confortable habitación con una cama king, cuentan con aire acondicionado, calefacción, televisión, teléfono, amenidades, secadora de pelo, burro de planchar y plancha a solicitud, con acceso directo al jardín de la fuente o con balcón para disfrutar de una hermosa vista a la montaña.",
+    "Confortable habitación con una cama King, cuentan con aire acondicionado, calefacción, televisión, teléfono, amenidades, secadora de pelo, burro de planchar y plancha a solicitud, con acceso directo al jardín de la fuente o con balcón para disfrutar de una hermosa vista a la montaña.",
   imgs: [
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694402577/habitaciones/kingSize/king2_tgkkop.jpg",
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694402575/habitaciones/kingSize/king_yynfvt.jpg",

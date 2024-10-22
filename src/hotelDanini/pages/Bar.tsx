@@ -62,7 +62,7 @@ export const Bar = () => {
                   <div className="row g-0">
                     <div className="col-md-12">
                       <p>
-                        Disfruta de una de las mejores vistas de Tezuitlan,
+                        Disfruta de una de las mejores vistas de Tezuitlán,
                         acompañado de tu bebida preferida .
                       </p>
                     </div>

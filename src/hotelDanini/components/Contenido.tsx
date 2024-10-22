@@ -22,21 +22,12 @@ export const Contenido = () => {
     <div className="container-fluid">
       <section id="content">
         <div className="row">
-          <div className={styles.info}>
-            <h1 style={{ marginTop: 35 }}>Acerca de Hotel Danini</h1>
-            <p>
-              Hotel Danini, ubicado en el Pueblo Mágico de Teziutlán, en el
-              estado de Puebla; es un lugar lleno de historia y tradición.
-              Caminar por sus calles es la mejor manera de descubrir la magia
-              que lo hace merecedor del título de 'Pueblo Mágico'.
-            </p>
-          </div>
           <div className={styles.info2}>
-            <h1>Bienvenido</h1>
+            <h1>Bienvenido al Hotel Danini</h1>
+            <p>Un lugar donde la naturaleza te consiente.</p>
+            <p>Con una ubicación privilegiada, el Hotel Danini es un exclusivo hotel de 21 habitaciones y suites, donde la comodidad, el servicio y la atención garantizan una estancia memorable.</p>
             <p>
-              La privilegiada ubicación del Hotel Danini le permitirá tener
-              acceso a los principales atractivos a tan solo unos pasos de
-              distancia.
+            Situado en el Pueblo Mágico de Teziutlán, un lugar lleno de historia y tradición, caminar por sus calles es la mejor manera de descubrir la magia de sus tradiciones históricas, culturales y gastronómicas.
             </p>
           </div>
           <div className={styles.info2} style={{ paddingTop: 0 }}>

@@ -59,7 +59,7 @@ export const Eventos = () => {
                     Costos
                   </h1>
                   <p>
-                    Contactanos y consulta acerca de nuestros paquetes,
+                    Contáctanos y consulta acerca de nuestros paquetes,
                     disponemos de una amplia gama de opciones para ti.
                   </p>
                 </div>

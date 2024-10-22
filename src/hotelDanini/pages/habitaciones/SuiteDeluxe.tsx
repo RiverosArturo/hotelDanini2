@@ -3,7 +3,7 @@ import { Habitacion, PublicidadSF, Tabla } from "../../components";
 const habitacion = {
   nombre: "Suite Deluxe",
   informacion:
-    "Amplia habitación con dos camas queen, cuenta con un vestidor, aire acondicionado, calefacción, televisión, teléfono, amenidades, secadora de pelo, burro de planchar y plancha, terraza en desde donde podrá disfrutar con una hermosa vista a la montaña.",
+    "Amplia habitación con dos camas Queen, cuenta con un vestidor, aire acondicionado, calefacción, televisión, teléfono, amenidades, secadora de pelo, burro de planchar y plancha, terraza donde podrá disfrutar una hermosa vista a la montaña.",
   imgs: [
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694402690/habitaciones/suiteDeluxe/suite_hd8yhc.jpg",
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694402693/habitaciones/suiteDeluxe/terraza_gt0sja.jpg",
