@@ -19,7 +19,7 @@ export const Eventos = () => {
       <div className={`container-fluid ${styles.hab}`}>
         <hr className="dropdown-divider" />
 
-        <div className={`card mb-3 mt-3 ${styles.habitacionCard}`}>
+        <div className={`${styles.habitacionCard}`}>
           <div className="row g-0" style={{ padding: 20 }}>
             <h1 className="card-title">Eventos</h1>
             <p>

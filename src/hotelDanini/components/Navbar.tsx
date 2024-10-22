@@ -1,42 +1,33 @@
 import { NavLink } from "react-router-dom";
 import styles from "../styles/styles.module.css";
-import logo from "../../assets/logo2.png";
 import { useScroll } from "../hooks";
 import { useState } from "react";
 
 export const Navbar = () => {
   const { visible, windowWidth } = useScroll();
   const [expanded, setExpanded] = useState(false);
-  const [expandedHabs, setExpandedHabs] = useState(false);
-  const [expandedRes, setExpandedRes] = useState(false);
-
-  const habs = () => {
-    setExpandedHabs(false);
-    setExpanded(false);
-  };
-
-  const res = () => {
-    setExpanded(false);
-    setExpandedRes(false);
-  };
 
   return (
     <div
       style={{ backgroundColor: "#f9f9f9" }}
-      className={`${
-        visible ? styles["navbar-show"] : styles["navbar-hide"]
-      }  fixed-top`}
+      className={`${visible ? styles["navbar-show"] : styles["navbar-hide"]} fixed-top`}
     >
-      <nav className="navbar navbar-expand-lg bg-body-tertiary data-bts-theme">
-        <div className={`${styles.navbarC} ${styles.menu} container-fluid`}>
-          <img
-            src={logo}
-            alt="logo"
-            className="mh-100"
-            style={{ width: "280px", height: "120px", padding: "20px" }}
-          />
+      <div className={`${styles.divLogo}`}>
+        <img
+          src="https://res.cloudinary.com/dawwp31sm/image/upload/v1728610239/inicio/LOGO_HOTEL_ecm8oc.png"
+          alt="logo"
+          className="mh-100"
+          style={windowWidth > 392 ? { width: "320px", height: "160px" } : { width: "270px", height: "160px" }}
+        />
+        {windowWidth < 992 && (
           <button
-            className="navbar-toggler bg-light"
+            className="navbar-toggler"
+            style={{
+              backgroundColor: "#f0e1ce", // Color claro
+              padding: "3px", // Espacio interno
+              border: "1px solid #f0e1ce", // Borde gris
+              borderRadius: "5px", // Bordes redondeados
+            }}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarText"
@@ -45,42 +36,76 @@ export const Navbar = () => {
             aria-label="Toggle navigation"
             onClick={() => setExpanded(!expanded)}
           >
-            <span className="navbar-toggler-icon"></span>
+            {/* <span className="navbar-toggler-icon">aaa</span> */}
+            <i className="bi bi-list" style={{ fontSize: "3rem", color: "#003629" }}></i>
           </button>
+        )}
+        {
+          windowWidth > 992 &&(
+            <span className={`navbar-text px-4 ${styles.menu} `}>
+              <a className="mx-2" href="tel:+522311023773" onClick={() => setExpanded(false)}>
+                <i className="bi bi-telephone-fill"></i>
+              </a>
+              <a className="mx-2"
+                href="https://www.facebook.com/HotelDaniniTeziutlan"
+                onClick={() => setExpanded(false)}
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a className="mx-2"
+                href="https://instagram.com/hoteldanini?igshid=YmMyMTA2M2Y="
+                onClick={() => setExpanded(false)}
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a className="mx-2"
+                href="https://goo.gl/maps/mixF55zxoMPCGuhE8"
+                onClick={() => setExpanded(false)}
+              >
+                <i className="bi bi-geo-alt"></i>
+              </a>
+            </span>
+          )
+        }
+      </div>
+
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className={`${styles.navbarC} ${styles.menu} container-fluid`} style={{ paddingBottom: '3px'}}>
+
+
           <div
-            className={`${styles.menu} collapse navbar-collapse ${
-              expanded ? "show" : ""
-            }`}
+            className={`collapse navbar-collapse ${expanded ? "show" : ""}`}
             id="navbarText"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item" onClick={() => setExpanded(false)}>
-                <NavLink to="/inicio" className="nav-link">
+                <NavLink to="/" className="nav-link">
                   Inicio
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                            <NavLink to="/habitaciones" className="nav-link" >Habitaciones</NavLink>
-                        </li> */}
+              <li className="nav-item" onClick={() => setExpanded(false)}>
+                <NavLink to="/nosotros" className="nav-link">
+                  Nosotros
+                </NavLink>
+              </li>
+
+              
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded={expandedHabs ? "true" : "false"}
-                  onClick={() => setExpandedHabs(!expandedHabs)}
+                  aria-expanded="false"
                 >
                   Habitaciones
                 </a>
-                <ul
-                  className={`${styles.navbarC} ${styles["nav-link"]} dropdown-menu`}
-                >
+                <ul className={`${styles.navbarC} ${styles["nav-link"]} dropdown-menu`}>
                   <li>
                     <NavLink
                       to="/habitacion/queenSize"
-                      className="nav-link"
-                      onClick={habs}
+                      className="dropdown-item"
+                      onClick={() => setExpanded(false)}
                     >
                       Queen Size
                     </NavLink>
@@ -88,8 +113,8 @@ export const Navbar = () => {
                   <li>
                     <NavLink
                       to="/habitacion/kingSize"
-                      className="nav-link"
-                      onClick={habs}
+                      className="dropdown-item"
+                      onClick={() => setExpanded(false)}
                     >
                       King Size
                     </NavLink>
@@ -97,8 +122,8 @@ export const Navbar = () => {
                   <li>
                     <NavLink
                       to="/habitacion/dobleMatrimonial"
-                      className="nav-link"
-                      onClick={habs}
+                      className="dropdown-item"
+                      onClick={() => setExpanded(false)}
                     >
                       Doble Matrimonial
                     </NavLink>
@@ -106,8 +131,8 @@ export const Navbar = () => {
                   <li>
                     <NavLink
                       to="/habitacion/suiteDeluxe"
-                      className="nav-link"
-                      onClick={habs}
+                      className="dropdown-item"
+                      onClick={() => setExpanded(false)}
                     >
                       Suite Deluxe
                     </NavLink>
@@ -115,49 +140,60 @@ export const Navbar = () => {
                   <li>
                     <NavLink
                       to="/habitacion/masterSuite"
-                      className="nav-link"
-                      onClick={habs}
+                      className="dropdown-item"
+                      onClick={() => setExpanded(false)}
                     >
                       Master Suite
                     </NavLink>
                   </li>
                 </ul>
               </li>
+
+              <li className="nav-item" onClick={() => setExpanded(false)}>
+                <NavLink to="/paquetes" className="nav-link">
+                  Paquetes
+                </NavLink>
+              </li>
+
               <li className="nav-item" onClick={() => setExpanded(false)}>
                 <NavLink to="/eventos" className="nav-link">
                   Eventos
                 </NavLink>
               </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded={expandedRes ? "true" : "false"}
-                  onClick={() => setExpandedRes(!expandedRes)}
+                  aria-expanded="false"
                 >
                   Restaurante-Bar
                 </a>
-                <ul
-                  className={`${styles.navbarC} ${styles["nav-link"]} dropdown-menu`}
-                >
+                <ul className={`${styles.navbarC} ${styles["nav-link"]} dropdown-menu`}>
                   <li>
                     <NavLink
                       to="/restauranteDanini"
-                      className="nav-link"
-                      onClick={res}
+                      className="dropdown-item"
+                      onClick={() => setExpanded(false)}
                     >
                       Restaurante Danini
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/barGallo" className="nav-link" onClick={res}>
-                      Bar el gallo
+                    <NavLink to="/barGallo" className="dropdown-item" onClick={() => setExpanded(false)}>
+                      Bar el Gallo
                     </NavLink>
                   </li>
                 </ul>
               </li>
+
+              <li className="nav-item" onClick={() => setExpanded(false)}>
+                <NavLink to="/petFriendly" className="nav-link">
+                  Pet Friendly
+                </NavLink>
+              </li>
+
               <li className="nav-item" onClick={() => setExpanded(false)}>
                 <NavLink to="/contactos" className="nav-link">
                   Contactos
@@ -165,38 +201,46 @@ export const Navbar = () => {
               </li>
             </ul>
 
-            <span className="navbar-text">
-              <a href="tel:+522311023773" onClick={() => setExpanded(false)}>
+            {
+          windowWidth < 992 &&(
+            <span className="navbar-text px-4">
+              <a className="mx-2" href="tel:+522311023773" onClick={() => setExpanded(false)}>
                 <i className="bi bi-telephone-fill"></i>
               </a>
-              <a
+              <a className="mx-2"
                 href="https://www.facebook.com/HotelDaniniTeziutlan"
                 onClick={() => setExpanded(false)}
               >
                 <i className="bi bi-facebook"></i>
               </a>
-              <a
+              <a className="mx-2"
                 href="https://instagram.com/hoteldanini?igshid=YmMyMTA2M2Y="
                 onClick={() => setExpanded(false)}
               >
                 <i className="bi bi-instagram"></i>
               </a>
-              <a
+              <a className="mx-2"
                 href="https://goo.gl/maps/mixF55zxoMPCGuhE8"
                 onClick={() => setExpanded(false)}
               >
                 <i className="bi bi-geo-alt"></i>
               </a>
             </span>
+          )
+        }
+
+            
           </div>
         </div>
       </nav>
-      {windowWidth > 768 ? (
+
+      {windowWidth > 768 && (
         <div style={{ backgroundColor: "#f9f9f9" }}>
           <h5
             style={{
               marginLeft: "20px",
               marginTop: "10px",
+              marginBottom: "0px",
               fontFamily: "BebasNeu",
               color: "#003629",
               letterSpacing: "2px",
@@ -206,8 +250,6 @@ export const Navbar = () => {
             ¡RESERVA YA!
           </h5>
         </div>
-      ) : (
-        <></>
       )}
       <div onClick={() => setExpanded(false)} id="widget-395614"></div>
     </div>

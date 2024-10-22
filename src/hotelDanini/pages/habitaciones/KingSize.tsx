@@ -1,4 +1,4 @@
-import { Habitacion, Tabla } from "../../components";
+import { Habitacion, PublicidadSF, Tabla } from "../../components";
 
 const habitacion = {
   nombre: "King Size",
@@ -31,6 +31,7 @@ const tabla = {
 export const KingSize = () => {
   return (
     <>
+      <PublicidadSF />
       <Habitacion habitacion={habitacion} />
       <Tabla tabla={tabla} />
     </>

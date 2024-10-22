@@ -7,17 +7,17 @@ export const Contactos = () => {
     <div className={`container-fluid ${styles.hab}`} style={dynamicStyles}>
       <hr className="dropdown-divider" />
 
-      <div className="card mb-3 mw-540">
+      <div className="card border-0 mb-3 mw-540">
         <div className="row g-0">
           <div className="col-md-6">
             <div className={`card-body ${styles.hab}`}>
               <h1 className="card-title">INFORMACIÓN DE CONTACTO</h1>
-              <p className="card-text mt-5">
+              <p className="card-text ">
                 ¡En Hotel Danini queremos que estés bien informado, esperamos
                 poder resolver todas tus dudas, ponte en contacto con nosotros!
               </p>
 
-              <p className="h6 text-secondary mt-5">
+              <p className="h6 text-secondary mt-4">
                 <i className="bi bi-envelope-fill"></i> info@hoteldanini.com
               </p>
               <p className="h6 text-secondary">

@@ -3,11 +3,19 @@ import { useScroll } from "../hooks";
 import styles from "../styles/styles.module.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { ImgAll } from "../components";
 
 export const Restaurante = () => {
   const { dynamicStyles, windowWidth } = useScroll();
-  const [showModal, setShowModal] = useState(false);
-  const [showImg, setShowImg] = useState("");
+  const [selectedImage, setSelectedImage] = useState<string>('');
+
+    const handleImageClick = (src: string) => {
+        setSelectedImage(src);
+    };
+
+    const handleCloseModal = () => {
+        setSelectedImage('');
+    };
 
   const img = [
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694444969/platillosRestaurante/waffle_dky4lv.jpg",
@@ -39,18 +47,13 @@ export const Restaurante = () => {
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694444814/platillosRestaurante/chilaquiles_qo53o9.jpg",
   ];
 
-  const setImage = (img: string) => {
-    setShowModal(true);
-    setShowImg(img);
-  };
-
   return (
     <div style={dynamicStyles}>
       <div className={`container-fluid ${styles.hab}`}>
         <hr className="dropdown-divider" />
 
-        <div className={`card mb-3 mt-3 ${styles.habitacionCard}`}>
-          <div className="row g-0" style={{ padding: 20 }}>
+        <div className={`mb-3 ${styles.habitacionCard}`}>
+          <div className="row g-0 p-3">
             <h1 className="card-title">Restaurante Danini</h1>
             <p style={{ margin: 0 }}>
               ¡Disfruta de una experiencia culinaria excepcional!
@@ -167,7 +170,7 @@ export const Restaurante = () => {
                                   alt={`Image ${index}`}
                                   height={70}
                                   width="100%"
-                                  onClick={() => setImage(image)}
+                                  onClick={() => handleImageClick(image)}
                                 />
                               </div>
                             </div>
@@ -183,40 +186,7 @@ export const Restaurante = () => {
         </div>
       </div>
       {/* Modal o alerta al hacer click en alguna imagen de platillos para celular */}
-      {showModal && (
-        <div
-          className="modal fade show"
-          tabIndex={-1}
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-          style={{ display: "block" }}
-        >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div
-                className="modal-header"
-                style={{ backgroundColor: "#006a51", color: "white" }}
-              >
-                <h1>Platillo</h1>
-              </div>
-              <div className="modal-body">
-                <img src={showImg} width="100%" />
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn"
-                  data-bs-dismiss="modal"
-                  onClick={() => setShowModal(false)}
-                  style={{ backgroundColor: "#006a51", color: "white" }}
-                >
-                  Cerrar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <ImgAll selectedImage={selectedImage} handleCloseModal={handleCloseModal} />
     </div>
   );
 };

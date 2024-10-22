@@ -1,3 +1,14 @@
+body {
+    color: white;
+}
+
+.divLogo {
+    background-color: #003629;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbarC {
     /* background-color: #0e331f; */
     background-color: #003629;
@@ -30,7 +41,7 @@
     font-family: "BebasNue";
     text-transform: uppercase;
     color: white;
-    padding: 10px;
+    padding: 6px;
     transition: all 300ms;
     text-decoration: none;
 }
@@ -39,6 +50,7 @@
     background: #006a51;
     color: white;
 }
+
 .footer {
     font-family: "BebasNeu", "TrebuchetMS";
 }
@@ -75,6 +87,18 @@
     padding-bottom: 40px;
 }
 
+.nosotros{
+    display: grid;
+    grid-template-columns: 100%;
+    font-family: "BebasNue";
+    font-style: italic;
+    font-size: 35px;
+    text-shadow: 1px 1px 0px #ccc;
+    color: rgb(99, 99, 99);
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
 .info2 {
     display: grid;
     grid-template-columns: 100%;
@@ -90,7 +114,7 @@
 
 
 
-.info h1, .info2 h1{
+.nosotros p, .info h1, .info2 h1{
     font-family:"BebasNue";
     font-style: italic;
     font-size: 35px;
@@ -108,6 +132,16 @@
     padding-top: 50px;
 }
 
+.nosotros p{
+    font-family: "BebasNue";
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    text-transform: none;
+    font-weight: 10;
+    padding-top: 0px;
+}
+
 
 /* ///////////////////////////////////////////////////////////////// */
 .hab {
@@ -116,7 +150,6 @@
     font-size: 35px;
     text-shadow: 1px 1px 0px #ccc;
     text-transform: uppercase;
-    padding-bottom: 0px;
 }
 
 .hab h1 {
@@ -167,4 +200,107 @@
 
 .navbar-show {
     transform: translateY(0);
+}
+
+/* Paquetes */
+.paqueteContainer {
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imageContainerPublicidad {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.packageTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 106, 81,0.8);
+    margin-bottom: 10px;
+}
+
+.incluyeList {
+    font-size: 16px;
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #555;
+    text-transform: none;
+}
+
+/* PublicidadSf */
+.publiSf {
+    display: grid;
+    font-family: "BebasNue";
+    text-transform: uppercase;
+}
+
+/* .paqueteContainerSf {
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+} */
+
+@media (max-width: 400px) {
+    .tabla h1{
+        font-size: 24px;
+    }
+}
+
+/* Scrollbar publi */
+.paqueteContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.paqueteContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.paqueteContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.paqueteContainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

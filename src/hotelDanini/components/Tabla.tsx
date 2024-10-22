@@ -10,6 +10,7 @@ export const Tabla = ({ tabla }: Props) => {
   return (
     <>
       <div className={`${styles.tabla} container-fluid`}>
+        {/* <h1 style={{ fontSize: '24px'}}>SERVICIOS DE HABITACIÓN</h1> */}
         <h1>SERVICIOS DE HABITACIÓN</h1>
         <table className="table">
           <tbody>

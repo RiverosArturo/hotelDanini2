@@ -29,14 +29,14 @@ export const Habitacion = ({ habitacion }: Props) => {
   };
 
   return (
-    <div style={dynamicStyles}>
-      <div className={`container-fluid ${styles.hab}`}>
+    <div>
+      <div className={`p-3 ${styles.hab}`}>
         <hr className="dropdown-divider" />
 
-        <div className="card mb-3 mw-540" style={styleX}>
-          <div className="row g-0">
+        <div className="mw-540" style={styleX}>
+          <div className="row">
             <div className="col-md-6">
-              <div className={`card-body ${styles.hab}`}>
+              <div className={`${styles.hab}`}>
                 <h1 className="card-title">{habitacion.nombre}</h1>
                 <p className="card-text">{habitacion.informacion}</p>
 

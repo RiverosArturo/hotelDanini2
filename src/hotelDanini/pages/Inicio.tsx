@@ -1,5 +1,6 @@
 import { Contenido } from "../components";
 import { useScroll } from "../hooks";
+import styles from "../styles/styles.module.css"; // Asegúrate de importar tus estilos
 
 export const Inicio = () => {
   const { dynamicStyles } = useScroll();
@@ -7,28 +8,24 @@ export const Inicio = () => {
   return (
     <>
       <div style={dynamicStyles}>
-        <div
-          style={{ position: "relative", width: "100%", paddingTop: "56.25%" }}
-        >
-          <div
-            className="col-md-12"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
+        {/* Contenedor del video con relación de aspecto 16:9 */}
+        <div className="embed-responsive embed-responsive-16by9">
+          <video
+            autoPlay
+            controls
+            className="embed-responsive-item"
+            style={{ width: "100%", height: "100%" }}
           >
-            <video autoPlay controls style={{ width: "100%", height: "100%" }}>
-              <source
-                src="https://res.cloudinary.com/dawwp31sm/video/upload/v1694406874/video/hotelDanini.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+            <source
+              src="https://res.cloudinary.com/dawwp31sm/video/upload/v1694406874/video/hotelDanini.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
-        <Contenido />
+        {/* Contenido */}
+        <div className={`${styles.contenido}`}>
+          <Contenido />
+        </div>
       </div>
     </>
   );

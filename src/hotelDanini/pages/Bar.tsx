@@ -10,8 +10,8 @@ export const Bar = () => {
       <div className={`container-fluid ${styles.hab}`}>
         <hr className="dropdown-divider" />
 
-        <div className={`card mb-3 mt-3 ${styles.habitacionCard}`}>
-          <div className="row g-0" style={{ padding: 20 }}>
+        <div className={`${styles.habitacionCard}`}>
+          <div className="row g-0 p-3" >
             <h1 className="card-title">Bar "El Gallo"</h1>
             <p style={{ margin: 0 }}>
               ¡Deléitate con una experiencia de bebidas extraordinaria en

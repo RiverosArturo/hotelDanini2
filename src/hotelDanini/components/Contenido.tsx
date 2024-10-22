@@ -1,11 +1,8 @@
-import { useState } from "react";
 import styles from "../styles/styles.module.css";
 import { useScroll } from "../hooks";
 
 export const Contenido = () => {
   const { windowWidth } = useScroll();
-  const [showModal, setShowModal] = useState(false);
-  const [showImg, setShowImg] = useState("");
 
   const img = [
     // "https://res.cloudinary.com/dawwp31sm/image/upload/v1694405860/inicio/240534740_125159046511759_3589096235612817581_n_c9arxp.jpg",
@@ -20,10 +17,7 @@ export const Contenido = () => {
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404188/eventos/boda5_h8thuo.jpg",
   ];
 
-  const setImage = (img: string) => {
-    setShowModal(true);
-    setShowImg(img);
-  };
+  
   return (
     <div className="container-fluid">
       <section id="content">
@@ -72,14 +66,12 @@ export const Contenido = () => {
                         alt={`Image ${index}`}
                         height={320}
                         width="100%"
-                        onClick={() => setImage(image)}
                       />
                     ) : (
                       <img
                         src={image}
                         alt={`Image ${index}`}
                         width="100%"
-                        onClick={() => setImage(image)}
                       />
                     )}
                   </div>
@@ -95,40 +87,6 @@ export const Contenido = () => {
           </div>
         </div>
       </section>
-      {showModal && (
-        <div
-          className="modal fade show"
-          tabIndex={-1}
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-          style={{ display: "block" }}
-        >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div
-                className="modal-header"
-                style={{ backgroundColor: "#006a51", color: "white" }}
-              >
-                <h1>Exterior</h1>
-              </div>
-              <div className="modal-body">
-                <img src={showImg} width="100%" />
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn"
-                  data-bs-dismiss="modal"
-                  onClick={() => setShowModal(false)}
-                  style={{ backgroundColor: "#006a51", color: "white" }}
-                >
-                  Cerrar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
