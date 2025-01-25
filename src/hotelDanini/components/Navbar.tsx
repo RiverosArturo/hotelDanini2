@@ -6,15 +6,21 @@ import { useState } from "react";
 export const Navbar = () => {
   const { visible, windowWidth } = useScroll();
   const [expanded, setExpanded] = useState(false);
+  const navigation = () => {
+    setExpanded(false); 
+    window.scrollTo(0, 0);
+  }
 
   return (
     <div
       style={{ backgroundColor: "#f9f9f9" }}
-      className={`${visible ? styles["navbar-show"] : styles["navbar-hide"]} fixed-top`}
+
+      className={`${ windowWidth > 768 && (visible ? styles["navbar-show"] : styles["navbar-hide"]) } fixed-top`}
+      // className={'fixed-top'}
     >
       <div className={`${styles.divLogo}`}>
         <img
-          src="https://res.cloudinary.com/dawwp31sm/image/upload/v1728610239/inicio/LOGO_HOTEL_ecm8oc.png"
+          src="https://res.cloudinary.com/dawwp31sm/image/upload/v1737787518/inicio/logoHotel_ck88dm.png"
           alt="logo"
           className="mh-100"
           style={windowWidth > 392 ? { width: "320px", height: "160px" } : { width: "270px", height: "160px" }}
@@ -24,6 +30,7 @@ export const Navbar = () => {
             className="navbar-toggler"
             style={{
               backgroundColor: "#f0e1ce", // Color claro
+              marginLeft: "10px",
               padding: "3px", // Espacio interno
               border: "1px solid #f0e1ce", // Borde gris
               borderRadius: "5px", // Bordes redondeados
@@ -78,12 +85,12 @@ export const Navbar = () => {
             id="navbarText"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item" onClick={() => setExpanded(false)}>
+              <li className="nav-item" onClick={navigation}>
                 <NavLink to="/" className="nav-link">
                   Inicio
                 </NavLink>
               </li>
-              <li className="nav-item" onClick={() => setExpanded(false)}>
+              <li className="nav-item" onClick={navigation}>
                 <NavLink to="/nosotros" className="nav-link">
                   Nosotros
                 </NavLink>
@@ -105,7 +112,7 @@ export const Navbar = () => {
                     <NavLink
                       to="/habitacion/queenSize"
                       className="dropdown-item"
-                      onClick={() => setExpanded(false)}
+                      onClick={navigation}
                     >
                       Queen Size
                     </NavLink>
@@ -114,7 +121,7 @@ export const Navbar = () => {
                     <NavLink
                       to="/habitacion/kingSize"
                       className="dropdown-item"
-                      onClick={() => setExpanded(false)}
+                      onClick={navigation}
                     >
                       King Size
                     </NavLink>
@@ -123,7 +130,7 @@ export const Navbar = () => {
                     <NavLink
                       to="/habitacion/dobleMatrimonial"
                       className="dropdown-item"
-                      onClick={() => setExpanded(false)}
+                      onClick={navigation}
                     >
                       Doble Matrimonial
                     </NavLink>
@@ -132,7 +139,7 @@ export const Navbar = () => {
                     <NavLink
                       to="/habitacion/suiteDeluxe"
                       className="dropdown-item"
-                      onClick={() => setExpanded(false)}
+                      onClick={navigation}
                     >
                       Suite Deluxe
                     </NavLink>
@@ -141,7 +148,7 @@ export const Navbar = () => {
                     <NavLink
                       to="/habitacion/masterSuite"
                       className="dropdown-item"
-                      onClick={() => setExpanded(false)}
+                      onClick={navigation}
                     >
                       Master Suite
                     </NavLink>
@@ -149,13 +156,13 @@ export const Navbar = () => {
                 </ul>
               </li>
 
-              <li className="nav-item" onClick={() => setExpanded(false)}>
+              <li className="nav-item" onClick={navigation}>
                 <NavLink to="/paquetes" className="nav-link">
                   Paquetes
                 </NavLink>
               </li>
 
-              <li className="nav-item" onClick={() => setExpanded(false)}>
+              <li className="nav-item" onClick={navigation}>
                 <NavLink to="/eventos" className="nav-link">
                   Eventos
                 </NavLink>
@@ -175,26 +182,26 @@ export const Navbar = () => {
                     <NavLink
                       to="/restauranteDanini"
                       className="dropdown-item"
-                      onClick={() => setExpanded(false)}
+                      onClick={navigation}
                     >
                       Restaurante Danini
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/barGallo" className="dropdown-item" onClick={() => setExpanded(false)}>
+                    <NavLink to="/barGallo" className="dropdown-item" onClick={navigation}>
                       Bar el Gallo
                     </NavLink>
                   </li>
                 </ul>
               </li>
 
-              <li className="nav-item" onClick={() => setExpanded(false)}>
+              <li className="nav-item" onClick={navigation}>
                 <NavLink to="/petFriendly" className="nav-link">
                   Pet Friendly
                 </NavLink>
               </li>
 
-              <li className="nav-item" onClick={() => setExpanded(false)}>
+              <li className="nav-item" onClick={ navigation }>
                 <NavLink to="/contactos" className="nav-link">
                   Contactos
                 </NavLink>

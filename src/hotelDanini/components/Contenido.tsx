@@ -8,16 +8,17 @@ export const Contenido = () => {
     // "https://res.cloudinary.com/dawwp31sm/image/upload/v1694405860/inicio/240534740_125159046511759_3589096235612817581_n_c9arxp.jpg",
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404470/exteriores/exteriorHabitaciones2_ilcjxn.jpg",
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404461/exteriores/exterior_cmtrep.jpg",
-    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404464/exteriores/exteriores_wpmnmx.jpg",
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694405110/inicio/inicio_oox5il.jpg",
-    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404473/exteriores/exteriorJuego_cno2ya.jpg",
-    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404467/exteriores/exteriorHabitaciones_evenni.jpg",
-    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404476/exteriores/vista_kc5qo2.jpg",
-    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404457/exteriores/entrada_hbw2vh.jpg",
+    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404464/exteriores/exteriores_wpmnmx.jpg",
+
     "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404188/eventos/boda5_h8thuo.jpg",
+    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404476/exteriores/vista_kc5qo2.jpg",
+    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404473/exteriores/exteriorJuego_cno2ya.jpg",
+    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404457/exteriores/entrada_hbw2vh.jpg",
+    "https://res.cloudinary.com/dawwp31sm/image/upload/v1694404467/exteriores/exteriorHabitaciones_evenni.jpg",
   ];
 
-  
+
   return (
     <div className="container-fluid">
       <section id="content">
@@ -27,7 +28,7 @@ export const Contenido = () => {
             <p>Un lugar donde la naturaleza te consiente.</p>
             <p>Con una ubicación privilegiada, el Hotel Danini es un exclusivo hotel de 21 habitaciones y suites, donde la comodidad, el servicio y la atención garantizan una estancia memorable.</p>
             <p>
-            Situado en el Pueblo Mágico de Teziutlán, un lugar lleno de historia y tradición, caminar por sus calles es la mejor manera de descubrir la magia de sus tradiciones históricas, culturales y gastronómicas.
+              Situado en el Pueblo Mágico de Teziutlán, un lugar lleno de historia y tradición, caminar por sus calles es la mejor manera de descubrir la magia de sus tradiciones históricas, culturales y gastronómicas.
             </p>
           </div>
           <div className={styles.info2} style={{ paddingTop: 0 }}>
@@ -45,6 +46,18 @@ export const Contenido = () => {
               creado pensando en tu comodidad y confort.
             </p>
           </div>
+          <div className="embed-responsive embed-responsive-16by9 p-3">
+            <video
+              controls
+              className="embed-responsive-item"
+              style={{ width: "100%", height: "100%" }}
+            >
+              <source
+                src="https://res.cloudinary.com/dawwp31sm/video/upload/v1694406874/video/hotelDanini.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
           <div className={styles.info2} style={{ paddingTop: 0 }}>
             <h1>Exterior</h1>
             <div className="row g-0" style={{ padding: 20 }}>
@@ -55,7 +68,7 @@ export const Contenido = () => {
                       <img
                         src={image}
                         alt={`Image ${index}`}
-                        height={320}
+                        // height={300}
                         width="100%"
                       />
                     ) : (
@@ -63,6 +76,7 @@ export const Contenido = () => {
                         src={image}
                         alt={`Image ${index}`}
                         width="100%"
+                        height="100%"
                       />
                     )}
                   </div>

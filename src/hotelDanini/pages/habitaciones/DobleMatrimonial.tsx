@@ -1,4 +1,5 @@
 import { Habitacion, PublicidadSF, Tabla } from "../../components";
+import { useScroll } from "../../hooks";
 
 const habitacion = {
   nombre: "Doble Matrimonial",
@@ -29,11 +30,13 @@ const tabla = {
 };
 
 export const DobleMatrimonial = () => {
+  const { dynamicStyles } = useScroll();
+  
   return (
-    <>
-      <PublicidadSF />
+    <div style={ dynamicStyles }>
       <Habitacion habitacion={habitacion} />
       <Tabla tabla={tabla} />
-    </>
+      <PublicidadSF />
+    </div>
   );
 };

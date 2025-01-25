@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useScroll } from "../hooks";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
@@ -8,8 +7,7 @@ import 'swiper/css/autoplay';
 import styles from "../styles/styles.module.css";
 
 export const PublicidadSF = () => {
-    const { dynamicStyles, windowWidth } = useScroll();
-    const [verMas, setVerMas] = useState<boolean>(false);
+    const [verMas, setVerMas] = useState(false);
 
     const handleToggle = () => {
         setVerMas(!verMas);
@@ -30,7 +28,7 @@ export const PublicidadSF = () => {
     ]
 
     return (
-        <div className={styles.imageContainerPublicidad} style={dynamicStyles}>
+        <div className={styles.imageContainerPublicidad} style={{ marginBottom: '0px' }} >
             <div
                 style={{
                     height: '500px',  // Altura fija
@@ -99,7 +97,7 @@ export const PublicidadSF = () => {
                     >
                         {
                             lista.map((list, i) => (
-                                <li style={{
+                                <li key={i} style={{
                                     fontSize: '17px',
                                     padding: '8px',
                                     textTransform: 'none',
@@ -120,61 +118,86 @@ export const PublicidadSF = () => {
 
             {/* Sección desplegable */}
             {verMas && (
-                <div className={`container-fluid ${styles.paqueteContainer} ${styles.nosotros}`} style={{
-                    position: 'absolute',
-                    fontFamily: 'BebasNue',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    zIndex: 10,
-                    height: '450px',
-                    width: '100%',
-                    overflowY: 'auto'
-                }}>
-                    <div className={`p-2`}>
-                        <h2 className={styles.packageTitle}>BENEFICIOS PARA HUÉSPEDES</h2>
-                        <ul className={styles.incluyeList}>
-                            <li>Acceso a las instalaciones de Santa Fé Casa Club.</li>
-                            <li>Uso de áreas recreativas y de descanso.</li>
-                            <li>Descuento en la tarifa de acceso por adulto y niño.</li>
-                        </ul>
+                <>
+                    <div
+                        className={`container-fluid ${styles.paqueteContainer} ${styles.nosotros}`}
+                        style={{
+                            position: 'fixed', // Se mantiene fijo en la pantalla
+                            top: '0', // Lo ponemos en la parte superior
+                            left: '0', // Y en la parte izquierda
+                            width: '100%', // Aseguramos que ocupe toda la pantalla
+                            height: '100%', // Ocupa toda la pantalla
+                            zIndex: 999, // Fondo con opacidad, por debajo del contenido
+                            backgroundColor: 'rgba(0, 0, 0, 0.5)', // Fondo oscuro con opacidad
+                        }}
+                    >
+                        {/* Fondo con opacidad */}
+                    </div>
 
-                        <h3 style={{ color: '#d79623', fontSize: '16px', fontWeight: 'bold' }}>TARIFAS</h3>
-                        <ul className={styles.incluyeList}>
-                            <li>Adulto $350.00 por día</li>
-                            <li>Niños (menores de 12 años) $200.00 por día</li>
-                        </ul>
+                    <div
+                        className={`container-fluid ${styles.paqueteContainer} ${styles.nosotros}`}
+                        style={{
+                            position: 'fixed', // Se mantiene fijo en la pantalla
+                            top: '50%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            zIndex: 9999, // Asegura que el contenido esté por encima del fondo
+                            height: '450px',
+                            width: '80%', // O 100% si prefieres que ocupe toda la pantalla
+                            maxWidth: '1200px', // Opcional para evitar que se vea desproporcionado
+                            overflowY: 'auto',
+                            backgroundColor: 'white', // Fondo blanco para el contenido
+                            borderRadius: '8px', // Bordes redondeados opcionales
+                            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Sombra para dar profundidad
+                        }}
+                    >
+                        <div className="p-2">
+                            <h2 className={styles.packageTitle}>BENEFICIOS PARA HUÉSPEDES</h2>
+                            <ul className={styles.incluyeList}>
+                                <li>Acceso a las instalaciones de Santa Fé Casa Club.</li>
+                                <li>Uso de áreas recreativas y de descanso.</li>
+                                <li>Descuento en la tarifa de acceso por adulto y niño.</li>
+                            </ul>
 
-                        <h3 style={{ color: '#d79623', fontSize: '16px', fontWeight: 'bold' }}>SERVICIOS INCLUIDOS</h3>
-                        <ul className={styles.incluyeList}>
-                            <li>Acceso a la alberca, jacuzzi y chapoteadero.</li>
-                            <li>Uso de las áreas de spa y salón de yoga.</li>
-                            <li>Vestidores, baño de vapor y regaderas.</li>
-                            <li>Entrada a las áreas deportivas.</li>
-                            <li>Uso de áreas verdes y jardines.</li>
-                            <li>Acceso al salón de juegos.</li>
-                            <li>Uso de instalaciones de juegos para niños.</li>
-                        </ul>
+                            <h3 style={{ color: '#d79623', fontSize: '16px', fontWeight: 'bold' }}>TARIFAS</h3>
+                            <ul className={styles.incluyeList}>
+                                <li>Adulto $350.00 por día</li>
+                                <li>Niños (menores de 12 años) $200.00 por día</li>
+                            </ul>
 
-                        <div style={{ textAlign: 'center', marginTop: '20px' }}>
-                            <h3 style={{ color: '#d79623', fontSize: '18px', fontWeight: 'bold' }}>Conoce más sobre Santa Fé Casa Club</h3>
-                            <p style={{ fontSize: '14px', color: '#666' }}>Sumérgete en la experiencia de Santa Fé Casa Club siguiéndolos en Instagram y explorando su página web para obtener información adicional.</p>
-                            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '10px' }}>
-                                <a href="https://www.instagram.com/santafe_teziutlan" target="_blank" rel="noopener noreferrer">
-                                    <i className="bi bi-instagram" style={{ width: '40px', height: '40px' }}></i>
-                                </a>
-                                <a href="https://santafecasaclub.com/" target="_blank" rel="noopener noreferrer">
-                                    <i className="bi bi-globe" style={{ width: '40px', height: '40px' }}></i>
-                                </a>
+                            <h3 style={{ color: '#d79623', fontSize: '16px', fontWeight: 'bold' }}>SERVICIOS INCLUIDOS</h3>
+                            <ul className={styles.incluyeList}>
+                                <li>Acceso a la alberca, jacuzzi y chapoteadero.</li>
+                                <li>Uso de las áreas de spa y salón de yoga.</li>
+                                <li>Vestidores, baño de vapor y regaderas.</li>
+                                <li>Entrada a las áreas deportivas.</li>
+                                <li>Uso de áreas verdes y jardines.</li>
+                                <li>Acceso al salón de juegos.</li>
+                                <li>Uso de instalaciones de juegos para niños.</li>
+                            </ul>
+
+                            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                                <h3 style={{ color: '#d79623', fontSize: '18px', fontWeight: 'bold' }}>Conoce más sobre Santa Fé Casa Club</h3>
+                                <p style={{ fontSize: '14px', color: '#666' }}>Sumérgete en la experiencia de Santa Fé Casa Club siguiéndolos en Instagram y explorando su página web para obtener información adicional.</p>
+                                <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '10px' }}>
+                                    <a href="https://www.instagram.com/santafe_teziutlan" target="_blank" rel="noopener noreferrer">
+                                        <i className="bi bi-instagram" style={{ width: '40px', height: '40px' }}></i>
+                                    </a>
+                                    <a href="https://santafecasaclub.com/" target="_blank" rel="noopener noreferrer">
+                                        <i className="bi bi-globe" style={{ width: '40px', height: '40px' }}></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div style={{ textAlign: 'center' }}>
+                                <button className="btn btn-success" style={{ alignContent: 'center' }} onClick={handleToggle}>Cerrar</button>
                             </div>
                         </div>
-
-                        <div style={{ textAlign: 'center' }}>
-                            <button className="btn btn-success" style={{ alignContent: 'center' }} onClick={handleToggle}>Cerrar</button>
-                        </div>
                     </div>
-                </div>
+                </>
+
             )}
+
         </div>
     )
 }

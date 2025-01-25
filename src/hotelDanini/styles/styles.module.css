@@ -57,14 +57,14 @@ body {
 
 .footer h3 {
     display: block;
-    background: #ffffff; 
-    height: 50px;
-    letter-spacing: 2px; 
-    text-align: center;
+    /* background: #ffffff;  */
+    height: 30px;
+    letter-spacing: 1px; 
+    text-align: left;/*center*/
     font-family: "BebasNeue", sans-serif; 
-    font-size: 24px; 
+    font-size: 12px; 
     line-height: 50px; 
-    color: black; 
+    color: white;  /*black*/
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
@@ -194,12 +194,13 @@ body {
 
 /* Estilos para mostrar o no el navbar */
 .navbar-hide {
-    transform: translateY(-100%);
+    transform: translateY(-65%);
     transition: transform 0.9s ease-in-out;
   }
 
 .navbar-show {
     transform: translateY(0);
+    transition: transform 0.9s ease-in-out;
 }
 
 /* Paquetes */
@@ -279,11 +280,71 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 } */
+ /* Carousel Inicio */
+.overlay-container {
+    position: relative;
+    display: hidden;
+}
+
+.overlay-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Color semitransparente */
+    z-index: 1;
+  }
+
+.overlay-text {
+    /* font-family: "BebasNue"; */
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    text-align: right;
+    color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
+
+.overlay-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.overlay-text a {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.overlay-text a:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+:root{--swiper-theme-color: rgba(240, 240, 240, 0.8) !important}
 
 @media (max-width: 400px) {
     .tabla h1{
         font-size: 24px;
     }
+}
+
+@media (max-width: 991px) {
+    .navbar-hide {
+        transform: translateY(-60%);
+      }
 }
 
 /* Scrollbar publi */
@@ -304,3 +365,4 @@ body {
 .paqueteContainer::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+

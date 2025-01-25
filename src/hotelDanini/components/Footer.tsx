@@ -12,103 +12,7 @@ export const Footer = () => {
           <div
             className={`${styles.footer} col-xs-10 col-md-8 col-lg-4 text-justify`}
           >
-            <h3 className="mb-3">MENÚ</h3>
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-secondary text-justify h6 p-4 pb-0 pt-0">
-              <li className="nav-item">
-                <NavLink to="/inicio" className="nav-link">
-                  Inicio
-                </NavLink>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Habitaciones
-                </a>
-                <ul
-                  className={`${styles["nav-link"]} bg-dark dropdown-menu text-secondary h6`}
-                >
-                  <li>
-                    <NavLink to="/habitacion/queenSize" className="nav-link">
-                      Queen Size
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/habitacion/kingSize" className="nav-link">
-                      King Size
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/habitacion/dobleMatrimonial"
-                      className="nav-link"
-                    >
-                      Doble Matrimonial
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/habitacion/suiteDeluxe" className="nav-link">
-                      Suite Deluxe
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/habitacion/masterDeluxe" className="nav-link">
-                      Master Deluxe
-                    </NavLink>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/eventos" className="nav-link">
-                  Eventos
-                </NavLink>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Restaurante-Bar
-                </a>
-                <ul
-                  className={`${styles["nav-link"]} bg-dark dropdown-menu text-secondary h6`}
-                >
-                  <li>
-                    <NavLink to="/restauranteDanini" className="nav-link">
-                      Restaurante Danini
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/menuDanini" className="nav-link">
-                      Menú Digital
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/barGallo" className="nav-link">
-                      Bar el gallo
-                    </NavLink>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/contactos" className="nav-link">
-                  Contactos
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            className={`${styles.footer} col-xs-10 col-md-8 col-lg-4 text-justify `}
-          >
-            <h3 className="h3 mb-3">CONTÁCTANOS</h3>
+            <h3 className="mb-3">HOTEL DANINI TEZIUTLÁN</h3>
             <div className="mb-2 p-4 pb-0 pt-0">
               <p className="h6 text-secondary">
                 <i className="bi bi-envelope-fill text-white h6"></i>{" "}
@@ -140,9 +44,9 @@ export const Footer = () => {
           </div>
 
           <div
-            className={`${styles.footer} col-xs-10 col-md-8 col-lg-4 text-justify`}
+            className={`${styles.footer} col-xs-10 col-md-8 col-lg-4 text-justify `}
           >
-            <h3 className="mb-3">REDES SOCIALES</h3>
+            <h3 className="h3 mb-3">REDES SOCIALES</h3>
             <div className="mb-2 p-4 pb-0 pt-0">
               <a
                 href="https://www.facebook.com/HotelDaniniTeziutlan"
@@ -159,6 +63,14 @@ export const Footer = () => {
                 <i className="bi bi-instagram"></i> hoteldanini
               </a>
             </div>
+
+          </div>
+
+          <div
+            className={`${styles.footer} col-xs-10 col-md-8 col-lg-4 text-justify`}
+          >
+            <h3 className="mb-3">TÉRMINOS Y POLÍTICAS DEL HOTEL</h3>
+            
             <div
               className="mb-2 p-4 pb-0 pt-0"
               onClick={() => setShowReservacion(true)}
@@ -179,7 +91,7 @@ export const Footer = () => {
 
           <div className="col-xs-12">
             <p className="text-white text-center pt-4 h6">
-              © 2023 Hotel Danini - Todos los derechos reservados.
+              © 2025 Hotel Danini - Todos los derechos reservados.
             </p>
           </div>
         </div>
@@ -203,7 +115,7 @@ export const Footer = () => {
               </div>
               <div
                 className="modal-body"
-                style={{ overflowY: "auto", maxHeight: "500px" }}
+                style={{ overflowY: "auto", maxHeight: "500px", color: "gray" }}
               >
                 <p>
                   HOTEL DANINI, con domicilio en calle CIRCUITO JUAN PABLO II #
@@ -388,7 +300,7 @@ export const Footer = () => {
               </div>
               <div
                 className="modal-body"
-                style={{ overflowY: "auto", maxHeight: "500px" }}
+                style={{ overflowY: "auto", maxHeight: "500px", color: "gray" }}
               >
                 <p>
                   Tarifas públicas por habitación por noche en pesos mexicanos -

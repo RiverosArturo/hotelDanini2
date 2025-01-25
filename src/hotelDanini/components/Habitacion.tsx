@@ -15,7 +15,7 @@ interface Hab {
 }
 
 export const Habitacion = ({ habitacion }: Props) => {
-  const { dynamicStyles, windowWidth } = useScroll();
+  const { windowWidth } = useScroll();
 
   const styleX = {
     margin:
