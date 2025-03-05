@@ -60,7 +60,7 @@ export const Navbar = () => {
                 <i className="bi bi-facebook"></i>
               </a>
               <a className="mx-2"
-                href="https://instagram.com/hoteldanini?igshid=YmMyMTA2M2Y="
+                href="https://www.instagram.com/hoteldanini_teziutlan?igsh=MW5ka201ajZxNmszcg=="
                 onClick={() => setExpanded(false)}
               >
                 <i className="bi bi-instagram"></i>
@@ -221,7 +221,7 @@ export const Navbar = () => {
                 <i className="bi bi-facebook"></i>
               </a>
               <a className="mx-2"
-                href="https://instagram.com/hoteldanini?igshid=YmMyMTA2M2Y="
+                href="https://www.instagram.com/hoteldanini_teziutlan?igsh=MW5ka201ajZxNmszcg=="
                 onClick={() => setExpanded(false)}
               >
                 <i className="bi bi-instagram"></i>

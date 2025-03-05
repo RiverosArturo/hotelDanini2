@@ -24,7 +24,7 @@ export const Contenido = () => {
       <section id="content">
         <div className="row">
           <div className={styles.info2}>
-            <h1>Bienvenido al Hotel Danini</h1>
+            <h1>Bienvenido a Hotel Danini</h1>
             <p>Un lugar donde la naturaleza te consiente.</p>
             <p>Con una ubicación privilegiada, el Hotel Danini es un exclusivo hotel de 21 habitaciones y suites, donde la comodidad, el servicio y la atención garantizan una estancia memorable.</p>
             <p>

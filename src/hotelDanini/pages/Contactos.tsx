@@ -45,7 +45,7 @@ export const Contactos = () => {
               ></iframe>
 
               <iframe
-                src="https://www.instagram.com/hoteldanini/embed"
+                src="https://www.instagram.com/hoteldanini_teziutlan/embed"
                 className="w-100"
                 style={{ border: "none", overflow: "hidden", height: "114px" }}
                 scrolling="no"

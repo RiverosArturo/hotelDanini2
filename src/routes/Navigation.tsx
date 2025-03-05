@@ -16,7 +16,7 @@ import {
   QueenSize,
   SuiteDeluxe
 } from "../hotelDanini/pages/habitaciones";
-import { Footer, Navbar } from "../hotelDanini/components";
+import { Footer, Navbar, WhatsappButton } from "../hotelDanini/components";
 import { useScroll } from "../hotelDanini/hooks";
 import { PetFriendly } from "../hotelDanini/pages/PetFriendly";
 
@@ -70,6 +70,7 @@ export const Navigation = () => {
         </Routes>
       </main>
       <Footer />
+      <WhatsappButton />
     </BrowserRouter>
   );
 };

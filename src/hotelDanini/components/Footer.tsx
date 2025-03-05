@@ -57,10 +57,10 @@ export const Footer = () => {
             </div>
             <div className="mb-2 p-4 pb-0 pt-0">
               <a
-                href="https://instagram.com/hoteldanini?igshid=YmMyMTA2M2Y="
+                href="https://www.instagram.com/hoteldanini_teziutlan?igsh=MW5ka201ajZxNmszcg=="
                 className="text-secondary text-decoration-none"
               >
-                <i className="bi bi-instagram"></i> hoteldanini
+                <i className="bi bi-instagram"></i> hoteldanini_teziutlan
               </a>
             </div>
 

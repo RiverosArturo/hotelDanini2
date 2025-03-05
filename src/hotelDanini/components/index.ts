@@ -9,3 +9,4 @@ export * from './Navbar';
 export * from './PaquetesCarrusel';
 export * from './PublicidadSF';
 export * from './Tabla';
+export * from './WhatsappButton';
